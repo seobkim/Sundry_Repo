@@ -1,3 +1,8 @@
 <Context docBase=" - " path=" - " reloadable="true" source="org.eclipse.jst.jee.server: - ">
-      	<Resources cachingAllowed="false"/>
+
+            <Resources cachingAllowed="false"/>
+
 </Context>
+-> <Resources cachingAllowed="false"/> 작성시 캐싱사용 x
+캐싱: 주어진 리소스 복사본 저장하고 있다 요청시 제공
+
