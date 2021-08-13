@@ -1,0 +1,17 @@
+update 학과
+set 학생번호 =(
+	select ta.학생번호
+	from 학생 as ta, 교수 as tb
+	where ta.학생번호,tb.학생번호
+	and 학과.학생번호 = ta.학생번호
+	)
+
+update c_waste 
+set sido_cde = (
+	select ta.bjcd 
+	from ngii_n3a ta, ngii_cdm tb
+	where substring(ta.bjcd, 1, 2) = substring(tb.bjcd, 1, 2)
+	and c_waste.sido = ta.name and c_waste.sigungu = tb.name
+	)
+
+업데이트 시 서브쿼리 내 조건절에서 업데이트할 테이블과 서브쿼리내 테이블과 조건연산이 가능
