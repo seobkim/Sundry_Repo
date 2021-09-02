@@ -1,0 +1,13 @@
+ORACLE 설치 및 사용시 까먹지 말 내용
+
+1- 오라클 설정된 케릭터셋 확인할것 default로 설치하여 조회가 필요할시
+select * from SYS.NLS_DATABASE_PARAMETERS where PARAMETER='NLS_CHARACTERSET'; 하여 조회
+
+2- listener.ora / tnsnames.ora 파일 수정 까먹지 말것
+
+3- 방화벽 풀것
+
+4- .dmp 파일 import 시 사용자룰 -> DBA 권한 있는지 확인
+
+5- 덤프파일 import 방법
+cmd -> imp DB_ID/DB_PWD file = 파일 경로 full = y
