@@ -1,3 +1,7 @@
+
+////////////////////////////////////////
+// 연동방법1 : SqlSessionDaoSupport 상속
+////////////////////////////////////////
 // BoardDAO.java 
 @Autowired 
 public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) { 
@@ -11,10 +15,14 @@ public void setSqlSessionFactory(SqlSessionFactory sqlSessionFactory) {
 
 
 
+
+////////////////////////////////////////
+// 연동방법2 : SqlSessionTemplate 활용
+////////////////////////////////////////
+
 // Datasource/mapper context XML 파일 수정
 
 //SqlSessionTemplate 빈 등록
-
 
 
 /***
