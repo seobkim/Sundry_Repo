@@ -11,3 +11,9 @@
 HTML 특수문자 기호를 사용하여 쿼리 작성
 
 ex) &lt(<) , &gt(>)
+
+
+NULL 값 insert or update 시
+target 값 <if test= 조건> param = null </if>
+
+postgres 빈 스트링값 ="" 넣을시 NULL 삽입 X
