@@ -4,3 +4,4 @@
 - Stream 객체 정리해둘것
 - JsonView 정리
 -
+- 스프링 @value 
