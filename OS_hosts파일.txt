@@ -1,0 +1,5 @@
+hosts 파일은 ip 주소와 도메인을 매핑해주는 리스트
+
+-> 0.0.0.0 : 22 examDomain.com
+
+-> ping으로 examDomain.com을 요청하면 위에 지정한 IP주소로 
