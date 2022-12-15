@@ -1,4 +1,4 @@
-## Mysql / JPA 벌크 Insert query
+## Mysql / JPA 벌크 Insert query를 위한 세팅
 
 벌크 insert / update
 JDBC URL에 rewriteBatchedStatements=true 옵션 추가
