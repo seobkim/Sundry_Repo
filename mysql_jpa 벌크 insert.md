@@ -45,23 +45,34 @@ public class testClass(){
     // 같은 키를 가진 리스트를 조회
     List<TestEntity> list = testEntityRepository.findAllByKeyIn(entityKeyList);
     
-    HashMap<String,TestEntity> map = new HashMap<>();
+    HashMap<String,TestEntity> tempMap = new HashMap<>();
+    
     for (TestEntity entity : list) {
-      cutsEntityHashMap.put(entity.getName(), entity);
+      tempMap.put(entity.getKey(), entity);
     }
     
-    // 변경할 데이터들의 key값을 리스트로 변환
-
-    
-
-    for (TestEntity entity : list) {
-      if (cutsEntityHashMap.containsKey(entity.getCutName())) {
-    
-
+    for(TestEntity entity : testEntityList){
+    	//True 일시 영속성 컨텍스트에 같은 값을 가진 데이터가 있음
+    	if(tempMap.containsKey(entity.getKey()){
+		TestEntity tempEntity = tempMap.get(entity.getKey());
+		
+		tempEntity.setValue1(entity.getValue1());
+		tempEntity.setValue2(entity.getValue2());
+		
+		//영속성 컨텍스트의 값을 바꾸고 Update
+		em.persist(tempEntity);
+	}else{
+		//false 시 새로운 데이터 insert
+		em.persist(entity);
+	}
+    }
+    em.flush(); //커밋
   }
 
 }
 ```
 
-Case 3:
-querydsl-jpa가 아닌 querydsl-sql 모듈 사용
+## Case 3 : querydsl-jpa가 아닌 querydsl-sql 모듈 사용
+```
+정리 
+```
